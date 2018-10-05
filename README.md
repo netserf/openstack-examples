@@ -41,3 +41,5 @@ openstack stack delete mystack
 [Single VM Example](heat-templates/single-vm.yml) - An example of how to instantiate a single VM in a pre-existing OpenStack network. This isn't ideal for reuse since the parameters need to be replaced for the OpenStack environment, but its an easy starting point.
 
 [Parameterized VM Example](heat-templates/parameterized-vm.yml) - An example exactly the same as the first one except this one moves all the instance variables into a [parameters file](heat-templates/parameterized-vm.env). This helps improve heat template reuse. You can now reference specific paramters file for different VM variations.
+
+[Network and VM Example](heat-templates/network-and-vm-with-output.yml) - An example that creates a private network with one VM in it. To gain access to this private network a router is required which NATs a floating public address to the private IP assigned to the VM. A [parameters file](heat-templates/network-and-vm-with-output.env) has been included.
