@@ -3,9 +3,10 @@
 
 Some helpful examples and usage of OpenStack technologies that I've been playing with.
 
-## GENERAL
+## General
 
 [OpenStack Client](https://docs.openstack.org/python-openstackclient/latest/) - Notes on how to use the OpenStack command line client.
+
 [OpenStack Client Install](https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html) - Notes on how to install python openstack client tools.
 
 ## HEAT
