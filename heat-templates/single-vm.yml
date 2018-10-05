@@ -1,0 +1,13 @@
+heat_template_version: '2018-08-31'
+
+description: Simple heat template to deploy a single compute instance
+
+resources:
+  my_instance:
+    type: OS::Nova::Server
+    properties:
+      key_name: my-key
+      image: CentOS-7-x86_64-GenericCloud
+      flavor: m1.small
+      networks:
+        - network: public
