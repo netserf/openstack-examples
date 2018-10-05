@@ -9,6 +9,34 @@ Some helpful examples and usage of OpenStack technologies that I've been playing
 
 [OpenStack Client Install](https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html) - Notes on how to install python openstack client tools.
 
+## Command Line Cheat Sheet
+
+Some useful commands for getting started:
+```
+openstack catalog list
+openstack image list
+openstack image show IMAGE
+
+openstack server list
+openstack flavor list
+openstack server show NAME
+openstack console log NAME
+openstack server stop NAME
+openstack server start NAME
+openstack server reboot NAME
+
+openstack network list
+openstack network create NETWORK_NAME
+openstack subnet create --subnet-pool SUBNET --network NETWORK SUBNET_NAME
+
+openstack keypair list
+
+openstack stack create -t single-vm.yml mystack2
+openstack stack delete mystack
+```
+[More cheat sheets](https://docs.openstack.org/ocata/user-guide/cli-cheat-sheet.html)
+
+
 ## HEAT
 [Single VM Example](heat-templates/single-vm.yml) - An example of how to instantiate a single VM in a pre-existing OpenStack network. This isn't ideal for reuse since the parameters need to be replaced for the OpenStack environment, but its an easy starting point.
 
