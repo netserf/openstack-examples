@@ -1,4 +1,4 @@
-# Useful Resources
+# OpenStack Examples
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 
 Some helpful examples and usage of OpenStack technologies that I've been playing with.
@@ -7,11 +7,11 @@ Some helpful examples and usage of OpenStack technologies that I've been playing
 
 [OpenStack Client](https://docs.openstack.org/python-openstackclient/latest/) - Notes on how to use the OpenStack command line client.
 
-[OpenStack Client Install](https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html) - Notes on how to install python openstack client tools.
+[OpenStack Client Install](https://docs.openstack.org/newton/user-guide/common/cli-install-openstack-command-line-clients.html) - Notes on how to install python OpenStack client tools.
 
 ## Command Line Cheat Sheet
 
-Some useful commands for getting started:
+Some useful OpenStack commands for getting started:
 ```
 openstack catalog list
 openstack image list
