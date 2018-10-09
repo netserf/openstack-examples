@@ -6,8 +6,8 @@ resources:
   my_instance:
     type: OS::Nova::Server
     properties:
-      key_name: my-key
-      image: CentOS-7-x86_64-GenericCloud
-      flavor: m1.small
+      key_name: default-key
+      image: "CentOS 7.5.1804 (x86_64) [2018-06-06]"
+      flavor: v2-highcpu-2
       networks:
         - network: public
