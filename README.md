@@ -44,7 +44,7 @@ openstack stack delete mystack
 
 [Network and VM Example](heat-templates/network-and-vm-with-output.yaml) - An example that creates a private network with one VM in it. To gain access to this private network a router is required which NATs a floating public address to the private IP assigned to the VM. A [parameters file](heat-templates/params2.yaml) has been included.
 
-[Resource Reuse Example](heat-templates/simple_host.yaml) - An example that reuses our earlier [single VM example](heat-templates/single-vm.yaml). In this case we register the resource template and instantiate 2 identical VMs. Try the following:
+[Resource Reuse Example](heat-templates/multiple-vms.yaml) - An example that reuses our earlier [single VM example](heat-templates/single-vm.yaml). In this case we [register the resource](heat-templates/simple_resource.yaml) template and instantiate 2 identical VMs. Try the following:
 ```
 $ openstack stack create -t multiple-vms.yaml -e simple_resource.yaml mystack
 $ openstack stack list
