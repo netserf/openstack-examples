@@ -1,0 +1,3 @@
+resource_registry:
+    My::ParamsWithDefaults::Server: param-with-defaults-vm.yaml
+

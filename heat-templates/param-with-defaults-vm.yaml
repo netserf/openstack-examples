@@ -3,6 +3,12 @@ heat_template_version: '2018-08-31'
 description: An improved template using parameters and defaults to deploy a single compute instance
 
 parameters:
+  hostname:
+    type: string
+    label: Host Name
+    description: Hostname that will be configured on the host
+    default: default_hostname
+  image_name:
   key_name:
     type: string
     label: Key Name
@@ -28,6 +34,7 @@ resources:
   my_instance:
     type: OS::Nova::Server
     properties:
+      name: { get_param: hostname }
       key_name: { get_param: key_name }
       image: { get_param: image_name }
       flavor: { get_param: instance_flavor }
