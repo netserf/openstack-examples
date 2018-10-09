@@ -1,0 +1,35 @@
+heat_template_version: '2018-08-31'
+
+description: An improved template using parameters and defaults to deploy a single compute instance
+
+parameters:
+  key_name:
+    type: string
+    label: Key Name
+    description: Name of key-pair to be used for compute instance
+    default: default-key
+  image_name:
+    type: string
+    label: Image Name
+    description: Image to be used for compute instance
+    default: "CentOS 7.5.1804 (x86_64) [2018-06-06]"
+  instance_flavor:
+    type: string
+    label: Instance Flavor
+    description: Type of instance (flavor) to be used
+    default: v2-highcpu-2
+  network_name:
+    type: string
+    label: Network Name
+    description: Name of the host's home network
+    default: public
+
+resources:
+  my_instance:
+    type: OS::Nova::Server
+    properties:
+      key_name: { get_param: key_name }
+      image: { get_param: image_name }
+      flavor: { get_param: instance_flavor }
+      networks:
+        - network: { get_param: network_name }

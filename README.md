@@ -53,6 +53,11 @@ $ openstack stack create -t parameterized-vm.yaml -e params1.yaml mystack
 $ openstack stack create -t network-and-vm-with-output.yaml -e params2.yaml mystack
 ```
 
+[Paramterized VM with Defaults Example](heat-templates/param-with-defaults-vm.yaml) - In some cases we do not want to explicitly state the parameters because this gets verbose and cumbersome. In this case having defaults is nice.
+```
+$ openstack stack create -t param-with-defaults-vm.yaml mystack
+```
+
 [Resource Reuse Example](heat-templates/multiple-vms.yaml) - An example that reuses our earlier [single VM example](heat-templates/single-vm.yaml). In this case we [register the resource](heat-templates/simple_resource.yaml) template and instantiate 2 identical VMs. 
 ```
 $ openstack stack create -t multiple-vms.yaml -e simple_resource.yaml mystack
