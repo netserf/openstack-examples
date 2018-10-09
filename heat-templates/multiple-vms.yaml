@@ -1,0 +1,10 @@
+heat_template_version: '2018-08-31'
+
+description: Simple heat template using a separate resource template to deploy a single compute instances
+
+resources:
+  myinstance1:
+    type: My::Simple::Server
+
+  myinstance2:
+    type: My::Simple::Server
