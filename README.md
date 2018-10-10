@@ -63,7 +63,7 @@ $ openstack stack create -t param-with-defaults-vm.yaml mystack
 $ openstack stack create -t multiple-vms.yaml -e simple_resource.yaml mystack
 ```
 
-[Parameterized Resource Reuse Example](heat-templates/multiple-vms-with-params.yaml) - An example that uses our earlier [paramterized VM with defaults example](heat-templates/param-with-defaults-vm.yaml). In this case we [register the resource](heat-templates/param-resource.yaml) template and instantiate 2 identical VMs. One of the examples uses the default hostname and the other on overrides the hostname.
+[Parameterized Resource Reuse Example](heat-templates/multiple-vms-with-params.yaml) - An example that uses our earlier [parameterized VM with defaults example](heat-templates/param-with-defaults-vm.yaml). In this case we [register the resource](heat-templates/params-resource.yaml) template and instantiate 2 identical VMs. One of the examples uses the default hostname and the other on overrides the hostname.
 ```
 $ openstack stack create -t multiple-vms-with-params.yaml -e params-resource.yaml mystack
 ```
